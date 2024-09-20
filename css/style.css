@@ -241,17 +241,17 @@ a:focus {
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
+
 .hero {
     position: relative;
     width: 100%;
-    margin-bottom: 45px;
-    padding: 120px 0 0 0;
-    overflow: hidden;
-    background: linear-gradient(#435679, #435679), url(../img/hero-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff; /* Texte en blanc */
+    padding: 120px 0 60px 0; /* Augmenter l'espace en bas */
+    background-color: #435679;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    min-height: auto; /* Pas de hauteur minimale pour la section */
 }
 
 .hero .container-fluid {
@@ -262,124 +262,115 @@ a:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    align-items: flex-start; /* Aligne le contenu à gauche */
+    text-align: left; /* Texte aligné à gauche */
+    margin-left: 11%; /* Augmenter la marge à gauche pour décaler davantage */
 }
 
 .hero .hero-text {
-    text-align: left;
+    margin-bottom: 20px;
 }
 
 .hero .hero-text .name {
-    font-size: 60px; /* Taille du nom */
+    font-size: 50px;
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffffff; /* Texte en blanc */
+    color: #ffffff;
 }
 
 .hero .hero-text .position {
-    font-size: 36px; /* Taille du poste */
+    font-size: 36px;
     font-weight: 600;
-    margin-bottom: 20px; /* Espacement avant les textes défilants */
-    color: #ffffff; /* Texte en blanc */
+    color: #ffffff;
 }
 
-.hero .typed-text-container {
-    position: relative;
-}
-
-.hero .typed-text {
-    font-size: 24px; /* Taille des mots défilants */
-    font-weight: 400;
-    color: #ffffff; /* Texte en blanc */
-    animation: fadeInOut 6s infinite; /* Animation des mots défilants */
-}
-
-@keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    10%, 30% { opacity: 1; }
-    40%, 60% { opacity: 0; }
-}
-
+/* Coordonnées dans des encadrés ovales individuels alignés sur une ligne */
 .hero .hero-contact {
     display: flex;
-    align-items: center;
-    margin-top: 20px;
+    align-items: center; /* Aligne les encadrés sur la même ligne */
+    gap: 15px; /* Espacement entre les encadrés */
+    margin-bottom: 20px;
 }
 
-.hero .hero-contact .contact-item {
+.hero .contact-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
     display: flex;
     align-items: center;
     color: #ffffff;
-    font-size: 18px;
-    margin-right: 20px;
+}
+
+.hero .contact-item a {
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
-.hero .hero-contact .contact-item i {
-    margin-right: 5px;
+.hero .contact-item a:hover {
+    color: #ff6f61; /* Couleur de survol pour les liens */
 }
 
-.hero .hero-contact .contact-item:hover {
-    text-decoration: underline;
+.hero .contact-item i {
+    margin-right: 8px;
 }
 
+/* Bouton de téléchargement du CV */
+.hero .hero-cv {
+    margin-top: 20px;
+}
+
+.hero .download-btn {
+    background-color: #ff6f61;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero .download-btn:hover {
+    background-color: #ff3f31;
+}
+
+/* Photo */
 .hero .hero-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Ajuste l'espacement au-dessus de l'image */
-    padding-left: 5%; /* Décalage vers la gauche */
+    margin-top: 20px;
 }
 
 .hero .hero-image img {
-    width: 80%; /* Réduit la taille de l'image */
-    max-width: 300px; /* Limite la largeur maximale de l'image */
-    height: auto; /* Conserve les proportions de l'image */
+    width: 80%;
+    max-width: 300px;
+    height: auto;
     border-radius: 50%;
-    object-fit: cover; /* Ajuste l'image dans son conteneur sans déformation */
+    object-fit: cover;
 }
 
-/* Media queries pour une meilleure réactivité */
+/* Media queries pour les petits écrans */
 @media (max-width: 991.98px) {
-    .hero {
-        padding-top: 60px;
-    }
-    
     .hero .hero-text .name {
         font-size: 36px;
     }
-    
+
     .hero .hero-text .position {
         font-size: 28px;
-    }
-    
-    .hero .typed-text {
-        font-size: 20px;
-    }
-    
-    .hero .hero-image-container {
-        padding-left: 0; /* Retire le décalage sur les petits écrans */
     }
 }
 
 @media (max-width: 767.98px) {
-    .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    
     .hero .hero-text .name {
         font-size: 30px;
     }
-    
+
     .hero .hero-text .position {
         font-size: 24px;
     }
-    
-    .hero .typed-text {
-        font-size: 18px;
-    }
-    
+
     .hero .hero-image img {
         width: 70%;
     }
@@ -389,22 +380,21 @@ a:focus {
     .hero .hero-text .name {
         font-size: 24px;
     }
-    
+
     .hero .hero-text .position {
         font-size: 20px;
     }
-    
-    .hero .typed-text {
-        font-size: 16px;
-    }
-    
+
     .hero .hero-image img {
         width: 60%;
     }
+
+    /* Ajustement de la taille des coordonnées sur petit écran */
+    .hero .contact-item {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
-
-
-
 
 /*******************************/
 /******* Experience CSS ********/
@@ -429,7 +419,6 @@ a:focus {
     left: 50%;
     margin-left: -1px;
 }
-
 
 .experience .timeline .timeline-item {
     position: relative;
@@ -466,20 +455,20 @@ a:focus {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -535,15 +524,7 @@ a:focus {
     font-size: 16px;
 }
 
-.experience .timeline .timeline-logo {
-    position: absolute;
-    top: 10px;
-    right: 10px; /* Toujours à droite */
-    display: flex;
-    align-items: center;
-    z-index: 2; /* Assure que le logo reste au-dessus des autres éléments */
-}
-
+/* Pour les petits écrans */
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
@@ -553,27 +534,27 @@ a:focus {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
     }
 
-    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.left::after,
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -583,13 +564,15 @@ a:focus {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
         border-left: 5px solid #dddddd;
     }
 }
+
+
 
 
 /*******************************/
@@ -661,6 +644,7 @@ a:focus {
 
 .education {
     padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .education-list {
@@ -677,7 +661,7 @@ a:focus {
     padding: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #f9f9f9;
     max-width: 600px; 
     margin-left: auto; 
     margin-right: auto;
@@ -813,6 +797,37 @@ a:focus {
     border-color: #435679;
 }
 
+/* Styles pour les informations supplémentaires */
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Couleur de fond semi-transparente */
+    color: #ffffff; /* Texte blanc */
+    padding: 10px;
+    opacity: 0; /* Masqué par défaut */
+    transition: opacity 0.3s ease-in-out;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+
+/* Afficher les infos lors du survol */
+.portfolio-wrap:hover .portfolio-info {
+    top: 0; /* La boîte descend à partir du haut */
+    opacity: 1; /* Affichage de la boîte */
+}
+
+/* Titre et bouton en premier plan */
+.portfolio-text {
+    position: relative;
+    z-index: 2; /* Assure que le titre et le bouton sont au-dessus des infos */
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+}
 
 /*******************************/
 /********* Contact CSS *********/
