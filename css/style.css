@@ -283,56 +283,30 @@ a:focus {
     color: #ffffff;
 }
 
-/* Coordonnées dans des encadrés ovales individuels alignés sur une ligne */
-.hero .hero-contact {
+/* Boutons de téléchargement du CV et de contact */
+.hero .hero-buttons {
     display: flex;
-    align-items: center; /* Aligne les encadrés sur la même ligne */
-    gap: 15px; /* Espacement entre les encadrés */
-    margin-bottom: 20px;
-}
-
-.hero .contact-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-}
-
-.hero .contact-item a {
-    color: #ffffff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.hero .contact-item a:hover {
-    color: #ff6f61; /* Couleur de survol pour les liens */
-}
-
-.hero .contact-item i {
-    margin-right: 8px;
-}
-
-/* Bouton de téléchargement du CV */
-.hero .hero-cv {
-    margin-top: 20px;
+    gap: 15px; /* Espacement entre les boutons */
+    margin-top: 20px; /* Espace au-dessus des boutons */
 }
 
 .hero .download-btn {
-    background-color: #ff6f61;
+    background-color: #ff6f61; /* Couleur des boutons */
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
+    display: inline-flex; /* Pour aligner l'icône et le texte */
+    align-items: center; /* Centre l'icône verticalement */
+}
+
+.hero .download-btn i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
 }
 
 .hero .download-btn:hover {
-    background-color: #ff3f31;
+    background-color: #ff3f31; /* Couleur au survol */
 }
 
 /* Photo */
@@ -388,13 +362,8 @@ a:focus {
     .hero .hero-image img {
         width: 60%;
     }
-
-    /* Ajustement de la taille des coordonnées sur petit écran */
-    .hero .contact-item {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
 }
+
 
 /*******************************/
 /******* Experience CSS ********/
