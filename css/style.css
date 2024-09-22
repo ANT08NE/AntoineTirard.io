@@ -246,8 +246,8 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 60px 0 40px 0; /* Augmenter l'espace en bas */
-    /*background-color: #435679; */
-    background: linear-gradient(135deg,#435679,#3a4e7a  );
+    background-color: #435679;
+   
     color: #ffffff;
     display: flex;
     align-items: center;
