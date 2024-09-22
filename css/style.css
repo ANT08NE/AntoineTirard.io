@@ -245,13 +245,45 @@ a:focus {
 .hero {
     position: relative;
     width: 100%;
-    padding: 120px 0 60px 0; /* Augmenter l'espace en bas */
-    background-color: #435679;
+    padding: 60px 0 40px 0; /* Augmenter l'espace en bas */
+    /*background-color: #435679; */
+    background: linear-gradient(135deg,#435679,#3a4e7a  );
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Espace entre le texte et l'image */
     min-height: auto; /* Pas de hauteur minimale pour la section */
+}
+
+
+/* Lumière autour du curseur */
+.cursor-light {
+    position: fixed;
+    pointer-events: none; /* Permet de ne pas affecter le comportement de clic */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.5); /* Effet de halo */
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Activer l'effet seulement sur la section avec la classe light-effect */
+.light-effect {
+    position: relative;
+}
+
+/* Masquer l'effet de lumière par défaut */
+.light-effect .cursor-light {
+    display: none;
+}
+
+/* Afficher l'aura lorsque vous êtes sur la section */
+.light-effect:hover .cursor-light {
+    display: block;
 }
 
 .hero .container-fluid {
@@ -432,13 +464,14 @@ a:focus {
     right: 10px;
     z-index: 1;
     border: 10px solid;
-    border-color: transparent transparent transparent #dddddd;
+    border-color: transparent transparent transparent #435679;
 }
 
 .experience .timeline .timeline-item.right::before {
     left: 10px;
-    border-color: transparent #dddddd transparent transparent;
+    border-color: transparent #435679 transparent transparent;
 }
+
 
 .experience .timeline .timeline-date {
     position: absolute;
@@ -466,13 +499,13 @@ a:focus {
     padding: 30px;
     background: #ffffff;
     position: relative;
-    border-right: 5px solid #dddddd;
+    border-right: 5px solid #435679;
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
     border-right: none;
-    border-left: 5px solid #dddddd;
+    border-left: 5px solid #435679;
 }
 
 .experience .timeline .timeline-text h2 {
@@ -492,6 +525,8 @@ a:focus {
     margin: 0;
     font-size: 16px;
 }
+
+
 
 /* Pour les petits écrans */
 @media (max-width: 767.98px) {
@@ -521,7 +556,7 @@ a:focus {
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
-        border-color: transparent #dddddd transparent transparent;
+        border-color: transparent #435679 transparent transparent;
     }
 
     .experience .timeline .timeline-item.left .timeline-date,
@@ -537,7 +572,7 @@ a:focus {
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
-        border-left: 5px solid #dddddd;
+        border-left: 5px solid #435679;
     }
 }
 
@@ -937,6 +972,16 @@ a:focus {
     border: none;
 }
 
+.footer .footer-menu p a {
+    color: #ffffff; /* Couleur par défaut des liens */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+.footer .footer-menu p a:hover {
+    color: #ff6f61; /* Couleur au survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
 .footer .footer-social {
     position: relative;
     margin-top: 15px;
@@ -958,7 +1003,7 @@ a:focus {
 }
 
 .footer .footer-social a:hover i {
-    color: #414141;
+    color: #ff6f61;
 }
 
 .footer .copyright {
@@ -994,7 +1039,7 @@ a:focus {
 }
 
 .footer .copyright p a:hover {
-    color: #414141;
+    color: #ff6f61; /* Couleur au survol pour le lien */
 }
 
 @media (max-width: 575.98px) {

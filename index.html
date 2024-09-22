@@ -59,6 +59,8 @@
 
         
 <!-- Hero Start -->
+<div class="hero light-effect" id="home">
+
 <div class="hero" id="home">
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -97,6 +99,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <!-- Hero End -->
 
@@ -160,9 +163,9 @@
             <!-- Stage Data Analyst -->
             <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                 <div class="timeline-text">
-                    <h2>Data Analyst - Stage</h2> 
+                    <h2>Data Analyst</h2> 
                     <h4>EDF Renouvelables, Montpellier</h4>
-                    <h4>Mars 2024 - Août 2024 (6 mois)</h4>
+                    <h4>Mars 2024 - Août 2024 (Stage · 6 mois)</h4>
                     <p>• Identification des besoins des équipes projets.</p>
                     <p>• Manipulation des diverses <b>sources de données</b>.</p>
                     <p>• Conception de dashboards <b>Power BI</b> pour le suivi du déploiement des projets et de leur suivi budgétaire via des KPIs.</p>
@@ -172,9 +175,9 @@
             <!-- Projet Tutoré -->
             <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
                 <div class="timeline-text">
-                    <h2>Projet Tutoré Analyse de donnée et Machine Learning</h2> 
+                    <h2>Analyse de donnée et Machine Learning</h2> 
                     <h4>SEE YOU SUN, Rennes</h4>
-                    <h4>Mars 2024 - Août 2024 (6 mois)</h4>
+                    <h4>Mars 2024 - Août 2024 (Projet tutoré · 6 mois)</h4>
                     <p>• Collecte de données en open data : domaines des véhicules électriques, des bornes de recharge, des données démographiques, et du trafic routier.</p>
                     <p>• Visualisation des données géospatiales avec <b>Python</b>: ratio du nombre de bornes par habitant, la densité, les distances stratégiques, etc.</p>
                     <p>• Développement et test de modèles statistiques: techniques de machine Learning.</p>
@@ -183,9 +186,9 @@
             <!-- Stage Business Intelligence -->
             <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                 <div class="timeline-text">
-                    <h2>Business Intelligence - Stage</h2> 
+                    <h2>Analyste de données</h2> 
                     <h4>AMI2, Lisieux</h4>
-                    <h4>Mars 2024 - Août 2024 (6 mois)</h4>
+                    <h4>Mars 2024 - Août 2024 (Stage ·6 mois)</h4>
                     <p>• Conception et déploiement d'un tableau de bord Power BI, pour l’analyse des performances e-commerce.</p>
                     <p>• Récupération, transformation et visualisation de données: des bases de données et Google Analytics.</p>
                     <p>• Répondre aux besoins en créant des visuels dédiés: les commandes, les catégories, les paniers, etc.</p>
@@ -328,34 +331,35 @@
 
 
 
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s" id="isfooter">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Contact</h2>
-                        <h3>Antoine Tirard</h3>
-                        <div class="footer-menu">
-                            <p>06 73 21 74 34</p>
-                            <p>tirardantoine@yahoo.fr</p>
-                        </div>
-
-
-                        <div class="footer-social">
-                            <a href="" target="_blank"><i class="fab fa-github"></i></a>
-
-                            <a href="" target="_blank"><i class="fab fa-medium"></i></a>
-
-                            <a href="https://www.linkedin.com/in/antoine-tirard/" target="_blank"><i class="fab fa-linkedin-in" ></i></a>
-                        </div>
-                    </div>
+       <!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s" id="isfooter">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="footer-info">
+                <h2>Contact</h2>
+                <h3>Antoine Tirard</h3>
+                <div class="footer-menu">
+                    <p>
+                        <a href="tel:+3373217434">06 73 21 74 34</a>
+                    </p>
+                    <p>
+                        <a href="mailto:tirardantoine@yahoo.fr">tirardantoine@yahoo.fr</a>
+                    </p>
                 </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">2024 Antoine Tirard</a>, All Right Reserved</a></p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/ton-github" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/antoine-tirard/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+        <div class="container copyright">
+            <p>&copy; <a href="#">2024 Antoine Tirard</a>, All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
         
         
         <!-- Back to top button -->
@@ -385,5 +389,33 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <!-- Template Javascript -->
+        <script>
+            // Sélectionnez la section où l'effet doit être appliqué
+            const lightSection = document.querySelector('.light-effect');
+        
+            // Créez l'élément lumineux
+            const light = document.createElement('div');
+            light.classList.add('cursor-light');
+            document.body.appendChild(light);
+        
+            // Ajouter un écouteur d'événements pour le mouvement de la souris
+            lightSection.addEventListener('mousemove', (e) => {
+                light.style.left = e.pageX + 'px';
+                light.style.top = e.pageY + 'px';
+            });
+        
+            // Masquer la lumière quand la souris sort de la section
+            lightSection.addEventListener('mouseleave', () => {
+                light.style.display = 'none';
+            });
+        
+            // Afficher la lumière quand la souris entre dans la section
+            lightSection.addEventListener('mouseenter', () => {
+                light.style.display = 'block';
+            });
+        </script>
+        
     </body>
 </html>
