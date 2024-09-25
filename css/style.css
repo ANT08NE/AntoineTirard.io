@@ -514,6 +514,13 @@ a:focus {
     font-weight: 600;
 }
 
+.experience .timeline .timeline-text h2 {
+    width: 20ch; /* Limite à environ 20 caractères */
+    white-space: normal; /* Permet de passer à la ligne */
+    overflow-wrap: break-word; /* Couper les mots si nécessaire */
+}
+
+
 .experience .timeline .timeline-text h4 {
     margin: 0 0 10px 0;
     font-size: 16px;
@@ -527,6 +534,14 @@ a:focus {
 }
 
 
+
+.company-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px; /* Ajuste la taille du logo */
+    height: auto; /* Garde les proportions du logo */
+}
 
 /* Pour les petits écrans */
 @media (max-width: 767.98px) {
@@ -698,140 +713,126 @@ a:focus {
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
-.portfolio {
-    position: relative;
-    padding: 45px 0 15px 0;
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.portfolio #portfolio-filter {
-    padding: 0;
-    margin: -15px 0 25px 0;
-    list-style: none;
-    font-size: 0;
-    text-align: center;
+.portfolio-item {
+    flex: 0 0 calc(33.333% - 10px); /* Réduire l'espace horizontal entre les projets */
+    margin-bottom: 5px; /* Réduire l'espace entre les projets */
 }
 
-.portfolio #portfolio-filter li {
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    background: #435679;
-    border: 2px solid transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 50px #435679;
-    transition: ease-out 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
+/* Card styling */
+.portfolio-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
 }
 
-.portfolio #portfolio-filter li:hover,
-.portfolio #portfolio-filter li.filter-active {
-    color: #435679;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #435679;
-    border-color: #435679;
+.portfolio-card:hover {
+    transform: translateY(-5px);
 }
 
-.portfolio .portfolio-item {
-    position: relative;
-}
-
-.portfolio .portfolio-wrap {
-    position: relative;
+.portfolio-img img {
     width: 100%;
+    height: auto;
 }
 
-.portfolio .portfolio-img {
-    position: relative;
-    overflow: hidden;
+/* Title styling with gray background and shadow */
+.portfolio-title {
+    background-color: #f5f5f5; /* Gris-blanc */
+    color: #333;
+    text-align: center;
+    padding: 15px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    font-weight: bold;
+    font-size: 12px; /* Réduisez la taille ici */
+}
+.portfolio-card .portfolio-title h3 {
+    font-size: 16px; /* Ajustez à la taille désirée */
 }
 
-.portfolio .portfolio-img img {
-    position: relative;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    transform: scale(1.1);
-    transition: .5s;
+.portfolio-description {
+    padding: 20px;
+    flex-grow: 1;
 }
 
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+.portfolio-description p {
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.portfolio .portfolio-text {
-    position: relative;
-    height: 60px;
-    width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+.portfolio-button {
+    text-align: center;
+    padding: 15px;
 }
 
-.portfolio .portfolio-text h3 {
-    width: calc(100% - 70px);
-    font-size: 18px;
+.portfolio-button .btn {
+    background-color: #435679;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
     font-weight: 600;
-    margin: 0 0 0 15px;
-    white-space: nowrap;
-    overflow: hidden;
+    text-decoration: none;
 }
 
-.portfolio .portfolio-text a.btn {
-    width: 50px;
-    height: 50px;
-    padding: 0 0 2px 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-weight: 100;
+.portfolio-button .btn:hover {
+    background-color: #2f3d56;
 }
 
-.portfolio .portfolio-item:hover a.btn {
-    color: #435679;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #435679;
-    border-color: #435679;
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .portfolio-item {
+        flex: 0 0 calc(50% - 10px); /* Affiche 2 projets par ligne sur tablette */
+    }
 }
 
-/* Styles pour les informations supplémentaires */
-.portfolio-info {
-    position: absolute;
-    bottom: 0;
+@media (max-width: 767.98px) {
+    .portfolio-item {
+        flex: 0 0 calc(100% - 10px); /* Affiche 1 projet par ligne sur mobile */
+    }
+}
+
+.modal {
+    display: none; /* Cacher par défaut */
+    position: fixed;
+    z-index: 999;
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Couleur de fond semi-transparente */
-    color: #ffffff; /* Texte blanc */
-    padding: 10px;
-    opacity: 0; /* Masqué par défaut */
-    transition: opacity 0.3s ease-in-out;
-    text-align: left;
-    font-size: 17px;
-    line-height: 1.5;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond semi-transparente */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
 }
 
-
-
-/* Afficher les infos lors du survol */
-.portfolio-wrap:hover .portfolio-info {
-    top: 0; /* La boîte descend à partir du haut */
-    opacity: 1; /* Affichage de la boîte */
+.modal-content {
+    display: block;
+    max-width: 50%; /* Ajustez si nécessaire */
+    max-height: 70%; /* Ajustez si nécessaire */
 }
 
-/* Titre et bouton en premier plan */
-.portfolio-text {
-    position: relative;
-    z-index: 2; /* Assure que le titre et le bouton sont au-dessus des infos */
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+.close {
+    position: absolute;
+    top: 15px; /* Position à partir du haut */
+    right: 20px; /* Position à partir de la droite */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000; /* Assurez-vous que la croix est au-dessus de l'image */
 }
+
 
 /*******************************/
 /********* Contact CSS *********/
