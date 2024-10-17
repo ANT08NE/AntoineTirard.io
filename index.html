@@ -41,7 +41,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav mx-auto">
                         <a href="#home" class="nav-item nav-link active">Profil</a>
                         <a href="#education" class="nav-item nav-link">Formation</a>
                         <a href="#experience" class="nav-item nav-link">Expérience</a>
@@ -60,23 +60,26 @@
         
 <!-- Hero Start -->
 <div class="hero light-effect" id="home">
-
-<div class="hero" id="home">
     <div class="container-fluid">
         <div class="row align-items-center">
             <!-- Texte à gauche -->
             <div class="col-sm-12 col-md-6">
                 <div class="hero-content">
-                    <!-- Nom et poste -->
                     <div class="hero-text">
-                        <h1 class="name">Data Analyst</h1>
-                        <h2 class="position">Antoine Tirard</h2>
+                        <h1 class="name">
+                            Hello <span class="wave-emoji">👋</span>
+                        </h1>
+                        <h2 class="position">Data Analyst</h2>
+                        <h2 class="intro-text">Je suis Antoine Tirard, j'ai à cœur de valoriser les données.</h2>
+                        
+                        <p class="intro-text">Exploitons ensemble l'analyse de données.</p>
+                        
                     </div>
 
                     <!-- Boutons de téléchargement du CV et de contact -->
                     <div class="hero-buttons">
                         <div class="hero-cv">
-                            <a href="assets/Antoine Tirard - CV - Data Analyst.pdf" class="btn download-btn" target="_blank" download>
+                            <a href="assets/Antoine_Tirard_CV.pdf" class="btn download-btn" target="_blank" download>
                                 <i class="fa fa-download"></i> Mon CV
                             </a>
                         </div>
@@ -90,7 +93,7 @@
             </div>
 
             <!-- Photo à droite -->
-            <div class="col-sm-12 col-md-6 d-none d-md-block">
+            <div class="col-sm-12 col-md-6">
                 <div class="hero-image-container">
                     <div class="hero-image">
                         <img src="assets/pic.jpg" alt="Image" class="circular-image">
@@ -99,24 +102,30 @@
             </div>
         </div>
     </div>
-</div>
+
+    <!-- Indication de défilement -->
+    <div class="scroll-indicator">
+        <i class="fa fa-chevron-down"></i> <!-- Utilisation d'une icône de flèche -->
+    </div>
 </div>
 <!-- Hero End -->
 
 
+<!-- Formation Start -->
+<div class="education" id="education">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Mon Parcours de Formation</h2>
+            <p>                             </p>
+        </div>
 
+        <!-- Carousel -->
+        <div id="educationCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
 
-
-
-        <!-- Formation Start -->
-        <div class="education" id="education">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <h2>Formation</h2>
-                </div>
-                <div class="education-list">
-                    <!-- Master -->
-                    <div class="education-item wow fadeInUp" data-wow-delay="0.0s">
+                <!-- Master -->
+                <div class="carousel-item active">
+                    <div class="education-item">
                         <div class="education-icon">
                             <img src="assets/UBS.png" alt="Université Bretagne Sud" style="width: 100px; height: 50px;">
                         </div>
@@ -126,8 +135,11 @@
                             <p>2022 - 2024 | Vannes</p>
                         </div>
                     </div>
-                    <!-- Licence -->
-                    <div class="education-item wow fadeInUp" data-wow-delay="0.4s">
+                </div>
+
+                <!-- Licence -->
+                <div class="carousel-item">
+                    <div class="education-item">
                         <div class="education-icon">
                             <img src="assets/UBS.png" alt="Université Bretagne Sud" style="width: 100px; height: 50px;">
                         </div>
@@ -137,21 +149,48 @@
                             <p>2021 - 2022 | Vannes</p>
                         </div>
                     </div>
-                    <!-- DUT -->
-                    <div class="education-item wow fadeInUp" data-wow-delay="0.8s">
+                </div>
+
+                <!-- DUT -->
+                <div class="carousel-item">
+                    <div class="education-item">
                         <div class="education-icon">
                             <img src="assets/IUT.png" alt="IUT Grand Ouest Normandie" style="width: 100px; height: 50px;">
                         </div>
                         <div class="education-details">
-                            <h3>DUT Statistique et informatique décisionnelle</h3>
+                            <h3>DUT Statistique et Informatique Décisionnelle</h3>
                             <p><strong>IUT Grand Ouest Normandie</strong></p>
                             <p>2019 - 2021 | Lisieux</p>
                         </div>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Contrôles -->
+            <a class="carousel-control-prev" href="#educationCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#educationCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+
+            <!-- Points de navigation -->
+            <ol class="carousel-indicators">
+                <li data-target="#educationCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#educationCarousel" data-slide-to="1"></li>
+                <li data-target="#educationCarousel" data-slide-to="2"></li>
+            </ol>
         </div>
-        <!-- Formation End -->
+    </div>
+</div>
+<!-- Formation End -->
+
+
+
+        
 
 <!-- Experience Start -->
 <div class="experience" id="experience">
@@ -276,7 +315,7 @@
                         <p><strong>Résultat:</strong> Connexion à différentes sources de données (SQL Server, Snowflake, Excel). Tableau de bord mis à jour quotidiennement, permettant un suivi efficace pour la prise de décision.</p>
                     </div>
                     <div class="portfolio-button">
-                        <a class="btn" href="https://lien-vers-projet.com" target="_blank">Voir le projet</a>
+                        <a class="btn" href="https://github.com/ANT08NE/Dashboard-Power-BI" target="_blank">Voir le projet</a>
                     </div>
                 </div>
             </div>
