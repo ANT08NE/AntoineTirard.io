@@ -20,6 +20,7 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ2QMLJ94Y"></script>
         <script>
@@ -29,6 +30,7 @@
 
         gtag('config', 'G-QZ2QMLJ94Y');
         </script>
+        
     </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -57,10 +59,11 @@
 
 
 
+
         
 <!-- Hero Start -->
 <div class="hero light-effect" id="home">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row align-items-center">
             <!-- Texte à gauche -->
             <div class="col-sm-12 col-md-6">
@@ -69,11 +72,8 @@
                         <h1 class="name">
                             Hello <span class="wave-emoji">👋</span>
                         </h1>
-                        <h2 class="position">Data Analyst</h2>
-                        <h2 class="intro-text">Je suis Antoine Tirard, j'ai à cœur de valoriser les données.</h2>
-                        
-                        <p class="intro-text">Exploitons ensemble l'analyse de données.</p>
-                        
+                        <h2 class="position" id="data-analyst"><strong>Data Analyst</strong></h2>
+                        <h2 class="intro-text">Moi c'est Antoine Tirard. Passioné par l'analyse de données en informations exploitables pour contribuer à la prise de décision.</h2>
                     </div>
 
                     <!-- Boutons de téléchargement du CV et de contact -->
@@ -86,6 +86,11 @@
                         <div class="hero-contact">
                             <a href="#isfooter" class="btn download-btn">
                                 <i class="fa fa-envelope"></i> Contact
+                            </a>
+                        </div>
+                        <div class="hero-linkedin">
+                            <a href="https://www.linkedin.com/in/antoine-tirard/" class="btn download-btn" target="_blank">
+                                <i class="fab fa-linkedin-in"></i> <!-- Utiliser la classe fab pour les icônes de marque -->
                             </a>
                         </div>
                     </div>
@@ -111,83 +116,83 @@
 <!-- Hero End -->
 
 
+
+
+<!-- Formation Start -->
 <!-- Formation Start -->
 <div class="education" id="education">
     <div class="container">
-        <div class="section-header text-center">
-            <h2>Mon Parcours de Formation</h2>
-            <p>                             </p>
+        <div class="section-header">
+            <div class="header-content">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Mon Parcours de Formation</h2>
+            </div>
         </div>
 
-        <!-- Carousel -->
-        <div id="educationCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner">
-
+        <div class="education-slider">
+            <div class="slider-container">
                 <!-- Master -->
-                <div class="carousel-item active">
-                    <div class="education-item">
+                <div class="education-item">
+                    <div class="education-card">
                         <div class="education-icon">
-                            <img src="assets/UBS.png" alt="Université Bretagne Sud" style="width: 100px; height: 50px;">
+                            <img src="assets/UBS.png" alt="Université Bretagne Sud">
                         </div>
                         <div class="education-details">
                             <h3>Master Data Science et Modélisation Statistique</h3>
-                            <p><strong>Université Bretagne Sud</strong></p>
-                            <p>2022 - 2024 | Vannes</p>
+                            <p class="school">Université Bretagne Sud</p>
+                            <p class="period">2022 - 2024 | Vannes</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Licence -->
-                <div class="carousel-item">
-                    <div class="education-item">
+                <div class="education-item">
+                    <div class="education-card">
                         <div class="education-icon">
-                            <img src="assets/UBS.png" alt="Université Bretagne Sud" style="width: 100px; height: 50px;">
+                            <img src="assets/UBS.png" alt="Université Bretagne Sud">
                         </div>
                         <div class="education-details">
                             <h3>Licence Mathématique, parcours Statistique</h3>
-                            <p><strong>Université Bretagne Sud</strong></p>
-                            <p>2021 - 2022 | Vannes</p>
+                            <p class="school">Université Bretagne Sud</p>
+                            <p class="period">2021 - 2022 | Vannes</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- DUT -->
-                <div class="carousel-item">
-                    <div class="education-item">
+                <div class="education-item">
+                    <div class="education-card">
                         <div class="education-icon">
-                            <img src="assets/IUT.png" alt="IUT Grand Ouest Normandie" style="width: 100px; height: 50px;">
+                            <img src="assets/IUT.png" alt="IUT Grand Ouest Normandie">
                         </div>
                         <div class="education-details">
                             <h3>DUT Statistique et Informatique Décisionnelle</h3>
-                            <p><strong>IUT Grand Ouest Normandie</strong></p>
-                            <p>2019 - 2021 | Lisieux</p>
+                            <p class="school">IUT Grand Ouest Normandie</p>
+                            <p class="period">2019 - 2021 | Lisieux</p>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Contrôles -->
-            <a class="carousel-control-prev" href="#educationCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-            </a>
-            <a class="carousel-control-next" href="#educationCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-            </a>
+            <!-- Navigation buttons -->
+            <button class="nav-btn prev-btn" aria-label="Previous">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn" aria-label="Next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
 
-            <!-- Points de navigation -->
-            <ol class="carousel-indicators">
-                <li data-target="#educationCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#educationCarousel" data-slide-to="1"></li>
-                <li data-target="#educationCarousel" data-slide-to="2"></li>
-            </ol>
+            <!-- Dots navigation -->
+            <div class="slider-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+            </div>
         </div>
     </div>
 </div>
 <!-- Formation End -->
-
+<!-- Formation End -->
 
 
         
@@ -196,7 +201,11 @@
 <div class="experience" id="experience">
     <div class="container">
         <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <h2>Expérience</h2>
+            <div class="header-content">
+                <i class="fas fa-briefcase"></i>
+                <h2>Expérience</h2>
+            </div>    
+
         </header>
         <div class="timeline">
             <!-- Stage Data Analyst -->
@@ -296,82 +305,93 @@
 <!-- Portfolio Start -->
 <div class="portfolio" id="portfolio">
     <div class="container">
-        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <h2>Projets</h2>
+        <div class="section-header text-center">
+            <h2 class="section-title">Projets</h2>
         </div>
-        <div class="row portfolio-container">
+        
+
+
+        <div class="portfolio-container">
             <!-- Projet 1 -->
-            <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.0s">
+            <div class="portfolio-item" data-category="powerbi">
                 <div class="portfolio-card">
-                    <div class="portfolio-img" onclick="openModal('assets/projet1.png')">
-                        <img src="assets/projet1.png" alt="Image">
+                    <div class="portfolio-img">
+                        <img src="assets/projet1.png" alt="Dashboard Power BI">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h4>Voir les détails</h4>
+                                <div class="overlay-icons">
+                                    <a href="#" class="preview-btn"><i class="fas fa-eye"></i></a>
+                                    <a href="https://github.com/" target="_blank" class="github-btn"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-title">
-                        <h3>Dashboard Power BI - KPI de Déploiement</h3>
-                    </div>
-                    <div class="portfolio-description">
-                        <p><strong>Technologies:</strong> Power BI, DAX, Power Query</p>
-                        <p><strong>Sujet:</strong> KPI de Suivi de Déploiement des Projets</p>
-                        <p><strong>Résultat:</strong> Connexion à différentes sources de données (SQL Server, Snowflake, Excel). Tableau de bord mis à jour quotidiennement, permettant un suivi efficace pour la prise de décision.</p>
-                    </div>
-                    <div class="portfolio-button">
-                        <a class="btn" href="https://github.com/ANT08NE/Dashboard-Power-BI" target="_blank">Voir le projet</a>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">
+                            <h3>Dashboard Power BI - KPI de Déploiement</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                        <div class="portfolio-context">
+                            <p><strong>Contexte :</strong> Suivi de déploiement des projets via des KPI en temps réel pour une analyse claire des performances.</p>
+                        </div>
+                        <div class="stack-technique">
+                            <h4>Stack technique</h4>
+                            <div class="portfolio-technologies">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">DAX</span>
+                                <span class="tech-tag">Power Query</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>2024</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Projet 2 -->
-            <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-item" data-category="tableau">
                 <div class="portfolio-card">
-                    <div class="portfolio-img" onclick="openModal('assets/projet_build.png')">
-                        <img src="assets/projet_build.png" alt="Image">
+                    <div class="portfolio-img">
+                        <img src="assets/projet_build.png" alt="Projet en cours">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h4>En développement</h4>
+                                <div class="overlay-icons">
+                                    <span class="coming-soon">Bientôt disponible</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-title">
-                        <h3>In Progress</h3>
-                    </div>
-                    <div class="portfolio-description">
-                        <p><strong>Outils:</strong> Tableau</p>
-                        <p><strong>Domaine:</strong> Analyse des données</p>
-                        <p><strong>Sujet:</strong> Visualisation de données</p>
-                    </div>
-                    <div class="portfolio-button">
-                        <a class="btn" href="https://lien-vers-projet.com" target="_blank">Voir le projet</a>
+                    <div class="portfolio-content">
+                        <div class="portfolio-title">
+                            <h3>In Progress</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                        <div class="portfolio-context">
+                            <p><strong>Contexte :</strong> Analyse des données pour la prise de décisions stratégiques.</p>
+                        </div>
+                        <div class="stack-technique">
+                            <h4>Stack technique</h4>
+                            <div class="portfolio-technologies">
+                                <span class="tech-tag">Tableau</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-date">
+                            <i class="fas fa-clock"></i>
+                            <span>En cours</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Projet 3 -->
-            <div class="col-lg-6 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.4s">
-                <div class="portfolio-card">
-                    <div class="portfolio-img" onclick="openModal('assets/projet_build.png')">
-                        <img src="assets/projet_build.png" alt="Image">
-                    </div>
-                    
-                    <div class="portfolio-title">
-                        <h3>In Progress</h3>
-                    </div>
-                    <div class="portfolio-description">
-                        <p><strong>Outils:</strong> Python, Scikit-learn</p>
-                        <p><strong>Domaine:</strong> Marketing</p>
-                        <p><strong>Sujet:</strong> Segmentation des clients</p>
-                    </div>
-                    <div class="portfolio-button">
-                        <a class="btn" href="https://lien-vers-projet.com" target="_blank">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-
-       </div>
+        </div>
     </div>
 </div>
-<!-- Modale -->
-<div id="myModal" class="modal" onclick="closeModal()">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-</div>
-
 <!-- Portfolio End -->
+
+
 
 
 
@@ -407,73 +427,112 @@
 
         
         
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+         <!-- Back to top button -->
+         <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
         
         
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
+         <!-- Pre Loader -->
+         <div id="loader" class="show">
+             <div class="loader"></div>
+         </div>
+         
+         
+         <!-- JavaScript Libraries -->
+         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+         <script src="lib/easing/easing.min.js"></script>
+         <script src="lib/wow/wow.min.js"></script>
+         <script src="lib/waypoints/waypoints.min.js"></script>
+         <!--<script src="lib/typed/typed.min.js"></script>-->
+         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+         <script src="lib/isotope/isotope.pkgd.min.js"></script>
+         <script src="lib/lightbox/js/lightbox.min.js"></script>
+         
+         <!-- Contact Javascript File -->
+         <script src="mail/jqBootstrapValidation.min.js"></script>
+         <script src="mail/contact.js"></script>
+ 
+         <!-- Template Javascript -->
+         <script src="js/main.js"></script>
 
+         <!-- Template Javascript -->
+         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Créer un élément pour l'effet de lumière
+                const light = document.createElement('div');
+                light.className = 'cursor-light';
+                document.body.appendChild(light);
         
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <!--<script src="lib/typed/typed.min.js"></script>-->
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
+                // Sélectionner la section Hero
+                const heroSection = document.querySelector('.hero.light-effect');
         
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-
-        <!-- Template Javascript -->
-        <script>
-            // Sélectionnez la section où l'effet doit être appliqué
-            const lightSection = document.querySelector('.light-effect');
+                // Suivre le mouvement de la souris uniquement dans la section Hero
+                heroSection.addEventListener('mousemove', function (e) {
+                    light.style.left = e.pageX + 'px';
+                    light.style.top = e.pageY + 'px';
+                });
         
-            // Créez l'élément lumineux
-            const light = document.createElement('div');
-            light.classList.add('cursor-light');
-            document.body.appendChild(light);
+                // Cacher l'effet lorsque la souris sort de la section Hero
+                heroSection.addEventListener('mouseleave', function () {
+                    light.style.opacity = '0'; // Cacher la lumière lorsque le curseur sort
+                });
         
-            // Ajouter un écouteur d'événements pour le mouvement de la souris
-            lightSection.addEventListener('mousemove', (e) => {
-                light.style.left = e.pageX + 'px';
-                light.style.top = e.pageY + 'px';
-            });
-        
-            // Masquer la lumière quand la souris sort de la section
-            lightSection.addEventListener('mouseleave', () => {
-                light.style.display = 'none';
-            });
-        
-            // Afficher la lumière quand la souris entre dans la section
-            lightSection.addEventListener('mouseenter', () => {
-                light.style.display = 'block';
+                // Afficher l'effet lorsque la souris entre dans la section Hero
+                heroSection.addEventListener('mouseenter', function () {
+                    light.style.opacity = '1'; // Afficher la lumière lorsque le curseur entre
+                });
             });
         </script>
-        <script>
-            function openModal(imageSrc) {
-    var modal = document.getElementById("myModal");
-    var img = document.getElementById("img01");
-    img.src = imageSrc;
-    modal.style.display = "flex"; // Changez ceci pour 'flex' pour centrer le contenu
-}
+        
+        
+         <script>
+             function openModal(imageSrc) {
+     var modal = document.getElementById("myModal");
+     var img = document.getElementById("img01");
+     img.src = imageSrc;
+     modal.style.display = "flex"; // Changez ceci pour 'flex' pour centrer le contenu
+ }
+ 
+ function closeModal() {
+     var modal = document.getElementById("myModal");
+     modal.style.display = "none";
+ }
+ 
+             </script>
 
-function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
-
-            </script>
-    </body>
-</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.slider-container');
+        const items = document.querySelectorAll('.education-item');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+    
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+    
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateSlider();
+        });
+    
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateSlider();
+        });
+    
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+    });
+    </script>
+     </body>
+ </html>

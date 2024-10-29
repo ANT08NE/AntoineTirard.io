@@ -292,6 +292,49 @@ a:focus {
 }
 
 
+.hero {
+    position: relative; /* Position relative pour permettre l'utilisation de l'ombre */
+    overflow: hidden; /* Pour s'assurer que l'effet de lumière ne déborde pas */
+}
+
+.light-effect {
+    cursor: none; /* Cacher le curseur par défaut */
+}
+
+/* Lumière sur le curseur avec effet dégradé */
+.cursor-light {
+    position: absolute;
+    width: 1000px; /* Taille du halo */
+    height: 1000px; /* Taille du halo */
+    border-radius: 50%; /* Faire en sorte que le halo soit circulaire */
+    background: radial-gradient(circle, rgba(12, 34, 231, 0.2) 0%, rgba(11, 25, 47, 0) 70%); /* Dégradé radial */
+    pointer-events: none; /* Ignorer les événements de la souris */
+    transform: translate(-50%, -50%); /* Centrer l'élément sur le curseur */
+    transition: transform 0.2s ease; /* Transition douce pour les effets */
+    animation: pulse 1.5s infinite; /* Animation de pulsation */
+    z-index: 1; /* Définir un z-index bas pour l'effet de lumière */
+
+}
+/* Effet de pulsation */
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1); /* Légère augmentation au centre */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Effet lorsque le curseur est au-dessus des boutons */
+.hero .hero-buttons .btn:hover + .cursor-light {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(11, 25, 47, 0) 70%); /* Changer le dégradé au survol */
+    box-shadow: 0 0 30px rgba(0, 178, 255, 0.7), 0 0 60px rgba(0, 178, 255, 0.5); /* Ombres plus marquées */
+}
+
+
 /* Section Hero */
 .hero {
     position: relative;
@@ -313,35 +356,44 @@ a:focus {
     justify-content: center; /* Centre verticalement le texte */
     align-items: flex-start; /* Aligne le texte à gauche */
     text-align: left; /* Texte aligné à gauche */
-    padding: 0px; /* Espace autour du texte */
-    margin-left: -20px;
+    padding: 0 15px; /* Ajuste l'espacement à gauche et à droite */
+    margin-left: 20px; /* Ajuste la marge à gauche pour l'alignement avec le portfolio */
 }
 
 .hero-text .name {
-    font-size: 50px; /* Taille du nom */
+    font-size: 50px; /* Taille du nom augmentée */
     font-weight: 700; /* Gras */
-    color: #ffffff;
+    color: #ffffff; /* Couleur de texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
+    margin-bottom: 10px; /* Espacement entre le nom et le poste */
 }
 
 .hero-text .position {
-    font-size: 36px; /* Taille du poste */
-    font-weight: 400;
-    color: #ffffff;
-    margin-bottom: 10px;
+    font-size: 36px; /* Taille du poste augmentée */
+    font-weight: 500; /* Semi-gras */
+    color: #0083fd; /* Couleur légèrement différente pour le poste */
+    margin-bottom: 15px; /* Espacement après le poste */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Ombre pour donner du relief */
 }
 
 .hero-text .intro-text {
-    font-size: 18px; /* Taille du texte d'introduction */
-    margin: 10px 0; /* Espacement autour du texte */
-    color: #ffffff; /* Couleur du texte */
+    font-size: 18px; /* Taille du texte d'introduction augmentée */
+    margin: 15px 0; /* Espacement autour du texte */
+    color: #e0e0e0; /* Couleur douce pour une meilleure lisibilité */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    text-align: justify; /* Justifier le texte pour un look plus soigné */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Ombre pour ajouter de la profondeur */
 }
+
 
 /* Conteneur de l'image à droite */
 .hero-image-container {
     display: flex;
     justify-content: center; /* Centre l'image horizontalement */
     align-items: center; /* Centre l'image verticalement */
-    margin-left: 50px; /* Espace entre le texte et l'image */
+    margin-left: 15px; /* Espace entre le texte et l'image pour être similaire au Portfolio */
+    z-index: 2; /* Définir un z-index plus élevé pour l'image */
+
 }
 
 .hero-image img {
@@ -350,6 +402,8 @@ a:focus {
     height: auto; /* Hauteur automatique */
     border-radius: 50%; /* Arrondi des bords */
     object-fit: cover; /* Ajuste l'image sans déformation */
+    z-index: 2; /* Définir un z-index plus élevé pour l'image */
+
 }
 
 /* Boutons */
@@ -359,6 +413,7 @@ a:focus {
     justify-content: flex-start; /* Aligne les boutons à gauche */
     margin-top: 20px; /* Espace au-dessus des boutons */
 }
+
 .hero .download-btn {
     background-color: #0083fd; /* Couleur des boutons */
     color: #ffffff; /* Couleur du texte des boutons */
@@ -368,6 +423,7 @@ a:focus {
     font-weight: 600; /* Épaisseur du texte */
     display: inline-flex; /* Pour aligner l'icône et le texte */
     align-items: center; /* Centre l'icône verticalement */
+    transition: background-color 0.3s ease; /* Transition pour un effet de survol */
 }
 
 .hero .download-btn i {
@@ -375,64 +431,291 @@ a:focus {
 }
 
 .hero .download-btn:hover {
-    background-color: #0083fd; /* Couleur au survol */
+    background-color: #006bb3; /* Couleur au survol plus foncée */
+}
+
+.hero-buttons .hero-linkedin .download-btn {
+    background-color: #0077b5; /* Couleur de fond LinkedIn */
+    padding: 10px 10px; /* Ajustement de l'espacement */
+}
+
+.hero-buttons .hero-linkedin .download-btn i {
+    font-size: 18px; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
 }
 
 /* Media queries pour les petits écrans */
+/* Media queries pour les petits écrans */
 @media (max-width: 991.98px) {
     .hero {
-        flex-direction: column; /* Empile le texte et l'image verticalement sur les petits écrans */
-        text-align: center; /* Centre le texte */
+        flex-direction: column;
+        text-align: center;
+        justify-content: center; /* Centre verticalement tout le contenu */
+        align-items: center; /* Centre horizontalement tout le contenu */
+        padding: 20px; /* Ajuste le padding pour plus d'espace */
     }
 
     .hero-content {
-        align-items: center; /* Centre le texte */
-        text-align: center; /* Aligne le texte au centre sur petits écrans */
+        width: 100%; /* Prend toute la largeur disponible */
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+        margin-left: 0; /* Retire la marge gauche */
+    }
+
+    .hero-text {
+        width: 100%; /* Assure que le texte prend toute la largeur */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centre tout le contenu du texte */
+    }
+
+    .hero-text .intro-text {
+        text-align: center; /* Centre le texte d'introduction */
+        max-width: 600px; /* Limite la largeur pour une meilleure lisibilité */
+        margin: 15px auto; /* Centre le bloc de texte */
     }
 
     .hero-image-container {
-        margin-left: 0;
-        margin-top: 20px; /* Espace entre le texte et l'image sur les petits écrans */
+        width: 100%; /* Prend toute la largeur */
+        margin: 20px 0; /* Ajoute de l'espace vertical */
+        display: flex;
+        justify-content: center;
     }
 
-    .hero-text .name {
-        font-size: 36px; /* Taille du nom sur petits écrans */
-    }
-
-    .hero-text .position {
-        font-size: 24px; /* Taille du poste sur petits écrans */
-    }
-}
-
-@media (max-width: 767.98px) {
-    .hero-text .name {
-        font-size: 30px; /* Taille du nom sur écrans plus petits */
-    }
-
-    .hero-text .position {
-        font-size: 20px; /* Taille du poste sur écrans plus petits */
-    }
-
-    .hero-image img {
-        width: 60%; /* Ajuste la taille de l'image sur petits écrans */
+    .hero-buttons {
+        justify-content: center; /* Centre les boutons */
+        width: 100%; /* Prend toute la largeur */
     }
 }
 
+/* Ajustements supplémentaires pour les très petits écrans */
 @media (max-width: 575.98px) {
-    .hero-text .name {
-        font-size: 24px; /* Taille du nom sur petits écrans */
+    .hero {
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+        min-height: 80vh; /* Garde une hauteur minimale */
     }
 
-    .hero-text .position {
-        font-size: 18px; /* Taille du poste sur petits écrans */
+    .hero-content {
+        padding: 10px; /* Réduit le padding sur très petits écrans */
     }
 
     .hero-image img {
-        width: 50%; /* Ajuste la largeur de l'image */
+        width: 200px; /* Taille fixe pour l'image */
+        height: 200px; /* Maintient l'aspect carré */
+        object-fit: cover; /* Assure que l'image reste proportionnelle */
     }
+}
+/*******************************/
+/********* education CSS *********/
+/*******************************/
+/* Formation Section */
+.education {
+    position: relative;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8faff, #f0f4ff);
 }
 
 
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.section-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.header-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-content i {
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Slider Container */
+.education-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden; /* Changer de hidden à visible */
+    padding: 0 50px; /* Ajouter du padding pour les boutons de navigation */
+}
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* Education Cards */
+.education-item {
+    min-width: 100%;
+    padding: 0 20px; /* Réduit le padding latéral */
+}
+
+.education-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* Icon Container */
+.education-icon {
+    flex: 0 0 96px;
+    height: 96px;
+    background: #f8faff;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Education Details */
+.education-details {
+    flex: 1;
+}
+
+.education-details h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.education-details .school {
+    color: #4a90e2;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.education-details .period {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.08);
+    z-index: 2;
+}
+
+.nav-btn:hover {
+    background: #f8faff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.prev-btn {
+    left: 0px;
+}
+
+.next-btn {
+    right: 0px;
+}
+
+.nav-btn i {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Dots Navigation */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    width: 24px;
+    background: #4a90e2;
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-icon {
+        margin: 0 auto 20px;
+    }
+
+    .nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+}
 
 /*******************************/
 /******* Experience CSS ********/
@@ -440,7 +723,7 @@ a:focus {
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
-    background-color: #b5c3db; 
+    background-color: #f4f8ff; 
 }
 
 .experience .timeline {
@@ -637,7 +920,29 @@ a:focus {
 /*******************************/
 .skill {
     padding: 60px 0;
-    background-color: #0b192f;; /* Couleur de fond pour la section des compétences */
+
+    background-image: url('../assets/1684929649452.jpg');
+    background-size: cover; /* Couvre toute la section */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+    position: relative; /* Pour pouvoir ajouter une couche de couleur */
+}
+
+/* Couche de couleur semi-transparente */
+.skill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 25, 47, 0.5); /* Couleur de fond avec transparence */
+    z-index: 1; /* Positionne derrière le texte */
+}
+
+.skill .container {
+    position: relative; /* Permet au texte de se superposer à la couche */
+    z-index: 2; /* Assure que le texte est au-dessus de la couche de couleur */
 }
 
 .skill .section-header {
@@ -646,7 +951,7 @@ a:focus {
 
 .skill h2 {
     font-size: 36px;
-    color: #333; /* Couleur du titre */
+    color: #fff; /* Couleur du titre pour le rendre lisible sur l'image de fond */
 }
 
 .skill-grid {
@@ -656,11 +961,13 @@ a:focus {
 }
 
 .skill-tile {
-    background-color: #ffffff; /* Couleur de fond des tuiles */
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond des tuiles avec transparence */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    position: relative; /* Permet de superposer le texte correctement */
+    z-index: 3; /* Assure que les tuiles sont au-dessus de la couche de couleur */
 }
 
 .skill-tile h3 {
@@ -694,191 +1001,258 @@ a:focus {
 
 
 
-/*******************************/
-/********* education CSS *********/
-/*******************************/
-/* Assure-toi d'ajouter ce CSS dans ton fichier styles.css ou dans une balise <style> dans le <head> */
-
-/* SECTION EDUCATION */
-.education {
-    padding: 60px 20px;
-    background-color: #f4f8ff;
-}
-
-.education-item {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px;
-    max-width: 700px; /* Limiter la largeur maximale des tuiles */
-    margin-left: auto; /* Centrer horizontalement */
-    margin-right: auto; /* Centrer horizontalement */
-}
-
-.education-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.education-icon {
-    flex: 0 0 80px;
-    margin-right: 20px;
-}
-
-.education-icon img {
-    width: 80px;
-    height: auto;
-}
-
-.education-details {
-    flex: 1;
-}
-
-.education-details h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1a1a1a;
-    margin-bottom: 5px;
-}
-
-.education-details p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Contrôles du carousel */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 50px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #333;
-    border-radius: 50%;
-}
-
-.carousel-indicators li {
-    background-color: #666;
-}
-
-.carousel-indicators .active {
-    background-color: #333;
-}
-
-/* Ajustements pour petits écrans */
-@media (max-width: 768px) {
-    .education-item {
-        flex-direction: column;
-        text-align: center;
-        min-height: auto;
-        max-width: 100%; /* Sur petits écrans, la tuile occupe toute la largeur */
-    }
-
-    .education-icon {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-
 
 
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Portfolio */
+.portfolio {
+    padding: 60px 20px;
+}
+
+.section-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #007bff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+
+
+/* Portfolio Container */
 .portfolio-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.portfolio-item {
-    flex: 0 0 calc(33.333% - 10px); /* Réduire l'espace horizontal entre les projets */
-    margin-bottom: 5px; /* Réduire l'espace entre les projets */
-}
-
-/* Card styling */
-.portfolio-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    height: 100%;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Image */
+.portfolio-img {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .portfolio-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Title styling with gray background and shadow */
-.portfolio-title {
-    background-color: #f5f5f5; /* Gris-blanc */
-    color: #333;
+/* Overlay */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-img:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
     text-align: center;
-    padding: 15px 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère */
-    font-weight: bold;
-    font-size: 12px; /* Réduisez la taille ici */
-}
-.portfolio-card .portfolio-title h3 {
-    font-size: 16px; /* Ajustez à la taille désirée */
-}
-
-.portfolio-description {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.portfolio-description p {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.portfolio-button {
-    text-align: center;
-    padding: 15px;
-}
-
-.portfolio-button .btn {
-    background-color: #0b192f;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
+}
+
+.overlay-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.overlay-icons a {
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.overlay-icons a:hover {
+    background: white;
+    color: #003366;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Portfolio Title */
+.portfolio-title h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #222;
     font-weight: 600;
-    text-decoration: none;
 }
 
-.portfolio-button .btn:hover {
-    background-color: #2f3d56;
+.title-underline {
+    width: 50%;
+    height: 4px;
+    background-color: #003366;
+    margin-top: 5px;
+    border-radius: 2px;
 }
 
-/* Responsive Styles */
-@media (max-width: 991.98px) {
-    .portfolio-item {
-        flex: 0 0 calc(50% - 10px); /* Affiche 2 projets par ligne sur tablette */
+/* Portfolio Context */
+.portfolio-context {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 15px 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+/* Technologies Tags */
+.portfolio-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    padding: 5px 12px;
+    background: #e9ecef;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Stack Technique Section */
+.stack-technique {
+    margin-top: 20px;
+}
+
+/* Date du projet */
+.portfolio-date {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.portfolio-date i {
+    color: #003366;
+}
+
+.stack-technique h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.portfolio-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    padding: 5px 12px;
+    background: #e9ecef;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-card {
+        flex-direction: column;
+    }
+
+    .portfolio-img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        height: 200px;
+    }
+
+    .portfolio-filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        width: calc(50% - 10px);
     }
 }
 
-@media (max-width: 767.98px) {
-    .portfolio-item {
-        flex: 0 0 calc(100% - 10px); /* Affiche 1 projet par ligne sur mobile */
-    }
-}
 
 .modal {
     display: none; /* Cacher par défaut */
@@ -910,6 +1284,7 @@ a:focus {
     cursor: pointer;
     z-index: 1000; /* Assurez-vous que la croix est au-dessus de l'image */
 }
+
 
 
 /*******************************/
