@@ -314,7 +314,8 @@ a:focus {
     align-items: flex-start; /* Aligne le texte à gauche */
     text-align: left; /* Texte aligné à gauche */
     padding: 0px; /* Espace autour du texte */
-    margin-left: -20px;
+    margin-left: 100px;
+    max-width: 500px;
 }
 
 .hero-text .name {
@@ -341,7 +342,7 @@ a:focus {
     display: flex;
     justify-content: center; /* Centre l'image horizontalement */
     align-items: center; /* Centre l'image verticalement */
-    margin-left: 50px; /* Espace entre le texte et l'image */
+    margin-left: 10px; /* Espace entre le texte et l'image */
 }
 
 .hero-image img {
@@ -440,7 +441,7 @@ a:focus {
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
-    background-color: #b5c3db; 
+    background-color: #0967ff ; 
 }
 
 .experience .timeline {
@@ -637,7 +638,7 @@ a:focus {
 /*******************************/
 .skill {
     padding: 60px 0;
-    background-color: #0b192f;; /* Couleur de fond pour la section des compétences */
+    background-color: #fa0000;; /* Couleur de fond pour la section des compétences */
 }
 
 .skill .section-header {
@@ -697,9 +698,7 @@ a:focus {
 /*******************************/
 /********* education CSS *********/
 /*******************************/
-/* Assure-toi d'ajouter ce CSS dans ton fichier styles.css ou dans une balise <style> dans le <head> */
 
-/* SECTION EDUCATION */
 .education {
     padding: 60px 20px;
     background-color: #f4f8ff;
@@ -747,7 +746,7 @@ a:focus {
 
 .education-details p {
     font-size: 14px;
-    color: #666;
+    color: #e20d0d;
 }
 
 /* Contrôles du carousel */
@@ -910,6 +909,7 @@ a:focus {
     cursor: pointer;
     z-index: 1000; /* Assurez-vous que la croix est au-dessus de l'image */
 }
+
 
 
 /*******************************/
