@@ -7,6 +7,9 @@
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -119,80 +122,85 @@
 
 
 <!-- Formation Start -->
-<!-- Formation Start -->
+
 <div class="education" id="education">
     <div class="container">
-        <div class="section-header">
-            <div class="header-content">
-                <i class="fas fa-graduation-cap"></i>
-                <h2>Mon Parcours de Formation</h2>
-            </div>
-        </div>
+        <div class="section-box"> <!-- Nouveau conteneur pour l'encadré -->
+            <div class="section-header">
+                <div class="header-content">
+                    <i class="fas fa-graduation-cap"></i>
+                    <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
 
-        <div class="education-slider">
-            <div class="slider-container">
-                <!-- Master -->
-                <div class="education-item">
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <img src="assets/UBS.png" alt="Université Bretagne Sud">
+                    <h2>Mon Parcours de Formation</h2>
+                    </header>
+                </div>
+            </div>
+
+            <div class="education-slider">
+                <div class="slider-container">
+                    <!-- Master -->
+                    <div class="education-item">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <img src="assets/UBS.png" alt="Université Bretagne Sud">
+                            </div>
+                            <div class="education-details">
+                                <h3>Master Data Science et Modélisation Statistique</h3>
+                                <p class="school">Université Bretagne Sud</p>
+                                <p class="period">2022 - 2024 | Vannes</p>
+                            </div>
                         </div>
-                        <div class="education-details">
-                            <h3>Master Data Science et Modélisation Statistique</h3>
-                            <p class="school">Université Bretagne Sud</p>
-                            <p class="period">2022 - 2024 | Vannes</p>
+                    </div>
+
+                    <!-- Licence -->
+                    <div class="education-item">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <img src="assets/UBS.png" alt="Université Bretagne Sud">
+                            </div>
+                            <div class="education-details">
+                                <h3>Licence Mathématique, parcours Statistique</h3>
+                                <p class="school">Université Bretagne Sud</p>
+                                <p class="period">2021 - 2022 | Vannes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUT -->
+                    <div class="education-item">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <img src="assets/IUT.png" alt="IUT Grand Ouest Normandie">
+                            </div>
+                            <div class="education-details">
+                                <h3>DUT Statistique et Informatique Décisionnelle</h3>
+                                <p class="school">IUT Grand Ouest Normandie</p>
+                                <p class="period">2019 - 2021 | Lisieux</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Licence -->
-                <div class="education-item">
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <img src="assets/UBS.png" alt="Université Bretagne Sud">
-                        </div>
-                        <div class="education-details">
-                            <h3>Licence Mathématique, parcours Statistique</h3>
-                            <p class="school">Université Bretagne Sud</p>
-                            <p class="period">2021 - 2022 | Vannes</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Navigation buttons -->
+                <button class="nav-btn prev-btn" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
 
-                <!-- DUT -->
-                <div class="education-item">
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <img src="assets/IUT.png" alt="IUT Grand Ouest Normandie">
-                        </div>
-                        <div class="education-details">
-                            <h3>DUT Statistique et Informatique Décisionnelle</h3>
-                            <p class="school">IUT Grand Ouest Normandie</p>
-                            <p class="period">2019 - 2021 | Lisieux</p>
-                        </div>
-                    </div>
+                <!-- Dots navigation -->
+                <div class="slider-dots">
+                    <button class="dot active" aria-label="Slide 1"></button>
+                    <button class="dot" aria-label="Slide 2"></button>
+                    <button class="dot" aria-label="Slide 3"></button>
                 </div>
             </div>
-
-            <!-- Navigation buttons -->
-            <button class="nav-btn prev-btn" aria-label="Previous">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="nav-btn next-btn" aria-label="Next">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <!-- Dots navigation -->
-            <div class="slider-dots">
-                <button class="dot active" aria-label="Slide 1"></button>
-                <button class="dot" aria-label="Slide 2"></button>
-                <button class="dot" aria-label="Slide 3"></button>
-            </div>
-        </div>
+        </div> <!-- Fin du conteneur section-box -->
     </div>
 </div>
 <!-- Formation End -->
-<!-- Formation End -->
+
 
 
         
@@ -219,6 +227,13 @@
                     <p>• Manipulation des diverses <b>sources de données</b>.</p>
                     <p>• Conception de dashboards <b>Power BI</b> pour le suivi du déploiement des projets et de leur suivi budgétaire via des KPIs.</p>
                     <p>• Publication et présentation des dashboards aux équipes pour améliorer la communication et la présentation des résultats.</p>
+
+                    <div class="portfolio-technologies">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Power Query</span>
+                    </div>
+
                 </div>
             </div>
             <!-- Projet Tutoré -->
@@ -257,9 +272,12 @@
 <!-- SKILL -->
 <div class="skill" id="skill">
     <div class="container">
+        <div class="header-content">
         <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <i class="fas fa-cogs"></i>
             <h2>Compétences</h2>
         </header>
+        </div>
 
         <div class="skill-grid">
             
@@ -305,87 +323,105 @@
 <!-- Portfolio Start -->
 <div class="portfolio" id="portfolio">
     <div class="container">
-        <div class="section-header text-center">
-            <h2 class="section-title">Projets</h2>
+        <div class="header-content">
+            <div class="section-header text-center">
+            
+
+            <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <i class="fa-regular fa-chart-user"></i>
+
+                <h2 class="section-title">Projets</h2>
+            </header>
         </div>
-        
+        </div>
 
-
-        <div class="portfolio-container">
-            <!-- Projet 1 -->
-            <div class="portfolio-item" data-category="powerbi">
-                <div class="portfolio-card">
-                    <div class="portfolio-img">
-                        <img src="assets/projet1.png" alt="Dashboard Power BI">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h4>Voir les détails</h4>
-                                <div class="overlay-icons">
-                                    <a href="#" class="preview-btn"><i class="fas fa-eye"></i></a>
-                                    <a href="https://github.com/" target="_blank" class="github-btn"><i class="fab fa-github"></i></a>
+        <!-- Swiper -->
+        <div class="swiper portfolio-swiper">
+            <div class="swiper-wrapper">
+                <!-- Projet 1 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-item" data-category="powerbi">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="assets/projet1.png" alt="Dashboard Power BI">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <h4>Voir les détails</h4>
+                                        <div class="overlay-icons">
+                                            <a href="#" class="preview-btn"><i class="fas fa-eye"></i></a>
+                                            <a href="https://github.com/" target="_blank" class="github-btn"><i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-title">
+                                    <h3>Dashboard Power BI - KPI de Déploiement</h3>
+                                    <div class="title-underline"></div>
+                                </div>
+                                <div class="portfolio-context">
+                                    <p><strong>Contexte :</strong> Suivi de déploiement des projets via des KPI en temps réel pour une analyse claire des performances.</p>
+                                </div>
+                                <div class="stack-technique">
+                                    <h4>Stack technique</h4>
+                                    <div class="portfolio-technologies">
+                                        <span class="tech-tag">Power BI</span>
+                                        <span class="tech-tag">DAX</span>
+                                        <span class="tech-tag">Power Query</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2024</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-title">
-                            <h3>Dashboard Power BI - KPI de Déploiement</h3>
-                            <div class="title-underline"></div>
-                        </div>
-                        <div class="portfolio-context">
-                            <p><strong>Contexte :</strong> Suivi de déploiement des projets via des KPI en temps réel pour une analyse claire des performances.</p>
-                        </div>
-                        <div class="stack-technique">
-                            <h4>Stack technique</h4>
-                            <div class="portfolio-technologies">
-                                <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">DAX</span>
-                                <span class="tech-tag">Power Query</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-date">
-                            <i class="fas fa-calendar"></i>
-                            <span>2024</span>
-                        </div>
-                    </div>
                 </div>
-            </div>
 
-            <!-- Projet 2 -->
-            <div class="portfolio-item" data-category="tableau">
-                <div class="portfolio-card">
-                    <div class="portfolio-img">
-                        <img src="assets/projet_build.png" alt="Projet en cours">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h4>En développement</h4>
-                                <div class="overlay-icons">
-                                    <span class="coming-soon">Bientôt disponible</span>
+                <!-- Projet 2 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-item" data-category="tableau">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img">
+                                <img src="assets/projet_build.png" alt="Projet en cours">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <h4>En développement</h4>
+                                        <div class="overlay-icons">
+                                            <span class="coming-soon">Bientôt disponible</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-title">
+                                    <h3>In Progress</h3>
+                                    <div class="title-underline"></div>
+                                </div>
+                                <div class="portfolio-context">
+                                    <p><strong>Contexte :</strong> Analyse des données pour la prise de décisions stratégiques.</p>
+                                </div>
+                                <div class="stack-technique">
+                                    <h4>Stack technique</h4>
+                                    <div class="portfolio-technologies">
+                                        <span class="tech-tag">Tableau</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-date">
+                                    <i class="fas fa-clock"></i>
+                                    <span>En cours</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-title">
-                            <h3>In Progress</h3>
-                            <div class="title-underline"></div>
-                        </div>
-                        <div class="portfolio-context">
-                            <p><strong>Contexte :</strong> Analyse des données pour la prise de décisions stratégiques.</p>
-                        </div>
-                        <div class="stack-technique">
-                            <h4>Stack technique</h4>
-                            <div class="portfolio-technologies">
-                                <span class="tech-tag">Tableau</span>
-                            </div>
-                        </div>
-                        <div class="portfolio-date">
-                            <i class="fas fa-clock"></i>
-                            <span>En cours</span>
-                        </div>
-                    </div>
                 </div>
             </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </div>
@@ -534,5 +570,29 @@
         });
     });
     </script>
+<script>
+const swiper = new Swiper('.portfolio-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    }
+});
+</script>
      </body>
  </html>

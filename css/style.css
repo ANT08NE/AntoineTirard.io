@@ -336,6 +336,7 @@ a:focus {
 
 
 /* Section Hero */
+
 .hero {
     position: relative;
     width: 100vw; /* Prend toute la largeur de la fenêtre */
@@ -406,6 +407,7 @@ a:focus {
 
 }
 
+
 /* Boutons */
 .hero-buttons {
     display: flex;
@@ -444,6 +446,7 @@ a:focus {
     color: white; /* Couleur de l'icône */
 }
 
+
 /* Media queries pour les petits écrans */
 /* Media queries pour les petits écrans */
 @media (max-width: 991.98px) {
@@ -475,6 +478,8 @@ a:focus {
         max-width: 600px; /* Limite la largeur pour une meilleure lisibilité */
         margin: 15px auto; /* Centre le bloc de texte */
     }
+
+    
 
     .hero-image-container {
         width: 100%; /* Prend toute la largeur */
@@ -510,13 +515,22 @@ a:focus {
 /********* education CSS *********/
 /*******************************/
 /* Formation Section */
+
 .education {
-    position: relative;
+    background-color: #f4f8ff ; /* Remplacez par la couleur de fond souhaitée pour la section */
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f8faff, #f0f4ff);
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 15% at -1% 18%, #164770FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 69% at 36% 70%, #dee2f3 70%, #073AFF00 100%),radial-gradient(70% 53% at 76% 96%, #dee2f3 46%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(21% 37% at 50% 44%, #88ABF09C 54%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #0864DBF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 6%, #0b192f 38%, #073AFF00 100%),linear-gradient(125deg, #0b192f 100%, #4C00FCFF 100%);
+        
 }
-
-
+    /*.section-box {
+    border-radius: 16px; /* Bords arrondis */
+     /*padding: 30px; /* Espacement interne */
+     /*background-color: rgba(217, 228, 238, 0.2); /* Arrière-plan semi-transparent */
+    /*background: linear-gradient(135deg, #eef2ff, #0d2b83); /* Couleur de fond dégradée */
+    /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  Légère ombre pour effet de profondeur */
+/*}*/
 
 .container {
     max-width: 1200px;
@@ -527,18 +541,20 @@ a:focus {
 .section-header {
     position: relative;
     text-align: center;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 
 
 
 .header-content {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+    text-align: center;
+    position: relative;
+    padding: 0px 0;
+    margin-bottom: 0px;
 }
+
 
 .header-content i {
     font-size: 32px;
@@ -549,7 +565,11 @@ a:focus {
     font-size: 32px;
     color: #2c3e50;
     font-weight: 600;
+    
 }
+
+
+
 
 /* Slider Container */
 .education-slider {
@@ -723,9 +743,10 @@ a:focus {
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
-    background-color: #f4f8ff; 
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #73F2FFFF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(17% 37% at 71% 38%, #0B192F96 4%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),linear-gradient(125deg, #DEE2F3FF 100%, #4C00FCFF 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%);
 }
-
 .experience .timeline {
     position: relative;
     width: 100%;
@@ -770,6 +791,7 @@ a:focus {
     border: 2px solid #0b192f;
     border-radius: 16px;
     z-index: 1;
+    
 }
 
 .experience .timeline .timeline-item.right::after {
@@ -820,13 +842,15 @@ a:focus {
     padding: 30px;
     background: #ffffff;
     position: relative;
-    border-right: 5px solid #0b192f;
+    border-right: 9px solid #0b192f;
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    border-radius: 10px;
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
     border-right: none;
-    border-left: 5px solid #0b192f;
+    border-left: 9px solid #0b192f;
+    border-radius: 10px;
 }
 
 .experience .timeline .timeline-text h2 {
@@ -928,6 +952,13 @@ a:focus {
     position: relative; /* Pour pouvoir ajouter une couche de couleur */
 }
 
+.skill i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+
+
 /* Couche de couleur semi-transparente */
 .skill::before {
     content: "";
@@ -961,7 +992,7 @@ a:focus {
 }
 
 .skill-tile {
-    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond des tuiles avec transparence */
+    background-color: rgb(255, 255, 255); /* Couleur de fond des tuiles avec transparence */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -1009,15 +1040,155 @@ a:focus {
 /* Global Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #eef2f3;
+    background-color: #0b192f;
     margin: 0;
     padding: 0;
 }
 
+
+
 /* Section Portfolio */
 .portfolio {
     padding: 60px 20px;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #00A1C5F5 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(74% 86% at 67% 92%, #0646A3FF 39%, #073AFF00 100%),radial-gradient(17% 37% at 71% 38%, #0B192F96 4%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #062DACF5 9%, #073AFF00 100%),linear-gradient(125deg, #DEE2F3FF 100%, #4C00FCFF 100%);}
+
+/* Styles pour le bouton toggle */
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
+
+.view-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-toggle-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.view-toggle-btn i {
+    font-size: 1.1rem;
+}
+
+/* Gestion de l'affichage des vues */
+.portfolio-view {
+    display: none;
+}
+
+.portfolio-view.active {
+    display: block;
+}
+
+/* Animation de transition */
+.portfolio-view {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-view.active {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .toggle-text {
+        display: none;
+    }
+    
+    .view-toggle-btn {
+        padding: 10px 15px;
+    }
+}
+
+/* État actif du bouton */
+.view-toggle-btn.list-active .list-icon,
+.view-toggle-btn:not(.list-active) .carousel-icon {
+    display: none;
+}
+
+.view-toggle-btn.list-active .carousel-icon,
+.view-toggle-btn:not(.list-active) .list-icon {
+    display: inline-block;
+}
+/* Ajoutez ces styles à votre CSS existant */
+
+.portfolio-swiper {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Personnalisation des flèches de navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #007bff;
+    background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+/* Personnalisation de la pagination */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #007bff;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Ajustements responsifs */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px;
+    }
+}
+
+/* Animation de transition */
+.swiper-slide {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+}
+
 
 .section-header {
     margin-bottom: 50px;
