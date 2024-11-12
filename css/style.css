@@ -1051,8 +1051,9 @@ body {
 .portfolio {
     padding: 60px 20px;
     background-size: 100% 100%;
-    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
-    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #00A1C5F5 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(74% 86% at 67% 92%, #0646A3FF 39%, #073AFF00 100%),radial-gradient(17% 37% at 71% 38%, #0B192F96 4%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #062DACF5 9%, #073AFF00 100%),linear-gradient(125deg, #DEE2F3FF 100%, #4C00FCFF 100%);}
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(35% 39% at 50% 10%, #84BFFFFF 44%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #0b192f 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #0E337FF5 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(19% 27% at 76% 41%, #3682DBF5 26%, #073AFF00 100%),radial-gradient(21% 37% at 71% 16%, #1ACFDA9C 54%, #073AFF00 100%),linear-gradient(125deg, #0b192f 1%, #0b192f 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 1%, #073AFF00 100%),radial-gradient(70% 53% at 11% 5%, #dee2f3 37%, #073AFF00 100%),radial-gradient(70% 53% at 77% 5%, #dee2f3 37%, #073AFF00 100%);
+}
 
 /* Styles pour le bouton toggle */
 .view-toggle {
@@ -1339,6 +1340,35 @@ body {
     font-size: 0.95em;
     color: #444;
 }
+
+
+
+.portfolio-card .portfolio-img img {
+    width: 100%;
+    height: auto; /* Conserve les proportions d'image */
+    object-fit: cover; /* Couvre l'espace du conteneur sans déformation */
+    display: block; /* Supprime les espaces indésirables autour de l'image */
+    border-radius: 8px; /* Optionnel : ajoute un léger arrondi aux coins de l'image */
+}
+
+.portfolio-card {
+    background-color: #ffffff; /* Fond blanc pour les cartes projet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre */
+    border-radius: 8px;
+    overflow: hidden; /* Garantit que les images ou contenus ne débordent pas des cartes */
+    transition: transform 0.3s ease; /* Effet de zoom ou de soulèvement */
+}
+
+/* Effet au survol */
+.portfolio-card:hover {
+    transform: scale(1.02); /* Légère mise en valeur au survol */
+}
+
+/* Ajustement de l'espacement interne des cartes pour un affichage propre */
+.portfolio-content {
+    padding: 20px;
+}
+
 
 /* Technologies Tags */
 .portfolio-technologies {
