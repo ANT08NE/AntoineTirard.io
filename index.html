@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8">
+        
+       <meta charset="utf-8">
         <title>Welcome - Portfolio</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
@@ -529,37 +530,42 @@
 
 
 
-
-
-       <!-- Footer Start -->
-<div class="footer wow fadeIn" data-wow-delay="0.3s" id="isfooter">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="footer-info">
-                <h2>Contact</h2>
-                <h3>Antoine Tirard</h3>
-                <div class="footer-menu">
-                    <p>
-                        <a href="tel:+3373217434">06 73 21 74 34</a>
-                    </p>
-                    <p>
-                        <a href="mailto:tirardantoine@yahoo.fr">tirardantoine@yahoo.fr</a>
-                    </p>
-                </div>
-
-                <div class="footer-social">
-                    <a href="" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/antoine-tirard/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<section class="contact-section">
+    <div class="contact-container">
+        <!-- Colonne Carte de Visite -->
+        <div class="contact-info">
+            <div class="personal-card">
+                <h2>Antoine Tirard</h2>
+                <div class="contact-details">
+                    <p><i class="fa fa-phone"></i> 06 73 21 74 34</p>
+                    <p><i class="fa fa-envelope"></i> tirardantoine@yahoo.fr</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/antoine-tirard/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container copyright">
-            <p>&copy; <a href="#">2024 Antoine Tirard</a>, All Rights Reserved</p>
+        
+        <!-- Colonne Formulaire -->
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/movqlwjv" method="POST">
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="_replyto" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Sujet" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
         </div>
     </div>
-</div>
+</section>
+
+
+
 <!-- Footer End -->
 
+        
         
         
          <!-- Back to top button -->
@@ -693,5 +699,15 @@ const swiper = new Swiper('.portfolio-swiper', {
     }
 });
 </script>
+
+<div id="chatbot-root"></div>
+
+<script type="text/javascript">
+  const chatbotContainer = document.getElementById('chatbot-root');
+  const root = ReactDOM.createRoot(chatbotContainer);
+  root.render(React.createElement(ChatBot));
+</script>
+
+
      </body>
  </html>
