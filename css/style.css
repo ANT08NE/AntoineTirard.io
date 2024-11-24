@@ -269,15 +269,7 @@ a:focus {
     transform: scale(1.2); /* Agrandir légèrement l'emoji au survol */
 }
 
-.scroll-indicator {
-    position: absolute; /* Positionne l'indicateur de défilement */
-    bottom: 20px; /* Espacement à partir du bas */
-    left: 50%; /* Centre l'icône horizontalement */
-    transform: translateX(-50%); /* Ajuste pour centrer exactement */
-    font-size: 24px; /* Taille de l'icône */
-    color: #ffffff; /* Couleur de l'icône */
-    animation: bounce 1.5s infinite; /* Animation de rebond */
-}
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -521,16 +513,10 @@ a:focus {
     padding: 80px 20px;
     background-size: 100% 100%;
     background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
-    background-image: radial-gradient(18% 15% at -1% 18%, #164770FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 69% at 36% 70%, #dee2f3 70%, #073AFF00 100%),radial-gradient(70% 53% at 76% 96%, #dee2f3 46%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(21% 37% at 50% 44%, #88ABF09C 54%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #0864DBF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 6%, #0b192f 38%, #073AFF00 100%),linear-gradient(125deg, #0b192f 100%, #4C00FCFF 100%);
-        
+    background-image:radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 13% 66%, #dee2f3 84%, #073AFF00 100%),radial-gradient(70% 53% at 50% 65%, #dee2f3 84%, #073AFF00 100%),radial-gradient(70% 53% at 85% 66%, #dee2f3 84%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(74% 86% at 67% 6%, #0b192f 38%, #073AFF00 100%),linear-gradient(125deg, #0b192f 100%, #4C00FCFF 100%),radial-gradient(35% 56% at 91% 74%, #0864DBF5 9%, #073AFF00 100%);
+
 }
-    /*.section-box {
-    border-radius: 16px; /* Bords arrondis */
-     /*padding: 30px; /* Espacement interne */
-     /*background-color: rgba(217, 228, 238, 0.2); /* Arrière-plan semi-transparent */
-    /*background: linear-gradient(135deg, #eef2ff, #0d2b83); /* Couleur de fond dégradée */
-    /*box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  Légère ombre pour effet de profondeur */
-/*}*/
+
 
 .container {
     max-width: 1200px;
@@ -544,9 +530,6 @@ a:focus {
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
-
-
-
 
 .header-content {
     text-align: center;
@@ -1037,23 +1020,15 @@ a:focus {
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
-/* Global Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0b192f;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 /* Section Portfolio */
 .portfolio {
     padding: 60px 20px;
-    background-size: 100% 100%;
-    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-size: cover;
+    background-position: center;
     background-image: radial-gradient(35% 39% at 50% 10%, #84BFFFFF 44%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #0b192f 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #0E337FF5 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(19% 27% at 76% 41%, #3682DBF5 26%, #073AFF00 100%),radial-gradient(21% 37% at 71% 16%, #1ACFDA9C 54%, #073AFF00 100%),linear-gradient(125deg, #0b192f 1%, #0b192f 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 1%, #073AFF00 100%),radial-gradient(70% 53% at 11% 5%, #dee2f3 37%, #073AFF00 100%),radial-gradient(70% 53% at 77% 5%, #dee2f3 37%, #073AFF00 100%);
+    
 }
+
 
 /* Styles pour le bouton toggle */
 .view-toggle {
@@ -1497,11 +1472,18 @@ body {
 .contact {
     position: relative;
     width: 100%;
-    margin: 45px 0;
+    margin: 0; /* Supprimez les marges */
+    padding: 45px 0; /* Ajoutez du padding à la place */
     background: #0b192f;
+    min-height: 100vh; /* Pour s'assurer que la section prend toute la hauteur */
 }
 
+
 .contact .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     background: url(../img/contact.jpg) left center no-repeat;
     background-size: contain;
 }
@@ -1577,97 +1559,362 @@ body {
 
 
 
-.contact-section {
-    background-color: #0b192f;
-    padding: 80px 0;
-    color: #ffffff;
-}
 
-.contact-container {
-    display: flex;
-    max-width: 1200px;
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    width: 100vw; /* Utilise toute la largeur de la fenêtre */
+    margin: 0;
+    padding: 45px 0 0 0;
+    background: #0b192f;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+}
+.footer .container {
+    width: 100%;
+    max-width: 1200px; /* ou la largeur que vous souhaitez */
     margin: 0 auto;
-    gap: 50px;
+    padding: 0 15px;
 }
 
-.contact-info, .contact-form {
-    flex: 1;
-}
-
-.personal-card {
-    background-color: #112240;
-    padding: 40px;
-    border-radius: 10px;
+.footer .footer-info {
+    position: relative;
+    width: 100%;
     text-align: center;
 }
 
-.personal-card h2 {
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px 0;
+    background: #0b192f; /* Assurez-vous que le fond est de la même couleur */
+}
+
+.footer .footer-info h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.contact-details p {
-    margin: 15px 0;
-    font-size: 18px;
-}
-
-.contact-details i {
-    margin-right: 10px;
-    color: #0967ff;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
+    font-size: 30px;
+    font-weight: 700;
     color: #ffffff;
-    font-size: 24px;
-    margin: 0 15px;
-    transition: color 0.3s;
 }
 
-.social-links a:hover {
+.footer .footer-info h3 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-menu p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+    border: none;
+}
+
+.footer .footer-menu p a {
+    color: #ffffff; /* Couleur par défaut des liens */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+.footer .footer-menu p a:hover {
+    color: #0967ff; /* Couleur au survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
     color: #0967ff;
 }
 
-.contact-form form {
+.footer .copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    top: 0;
+    left: 25%;
+    background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+    color: #0967ff; /* Couleur au survol pour le lien */
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-info h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .footer .footer-info h3 {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .footer .footer-menu p {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
+}
+
+
+/*******************************/
+/********* ChatBot CSS **********/
+/*******************************/
+:root {
+    --primary-color: #0083fd;
+    --secondary-color: #0056b3;
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    --border-radius: 8px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur principal du chatbot */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background-color: var(--background-color);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    display: none;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    animation: fadeInScale 0.4s ease-in-out;
+
+}
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#chatbot-container[style*="display: block"] {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* En-tête du chatbot */
+#chatbot-header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Zone des messages */
+#chat-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
-.contact-form input, 
-.contact-form textarea {
-    margin-bottom: 20px;
-    padding: 12px;
-    background-color: #112240;
-    border: 1px solid #233554;
-    color: #ffffff;
+/* Conteneur d'entrée utilisateur */
+#chat-input-container {
+    padding: 10px;
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+#user-input {
+    flex: 1;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
 }
-
-.contact-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.contact-form button {
-    background-color: #0967ff;
-    color: #ffffff;
+#send-message {
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
 }
 
-.contact-form button:hover {
-    background-color: #0b47a3;
+#send-message:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 30px;
+#send-message:focus,
+#user-input:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.chat-suggestion {
+    margin: 5px 0;  /* Espacement vertical entre les suggestions */
+    padding: 8px 12px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 14px;  /* Taille de texte uniforme */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;  /* Les suggestions s'empilent verticalement */
+    width: 100%;  /* Les boutons prennent toute la largeur du conteneur */
+}
+
+.chat-suggestion:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #d3d3d3;  /* Gris clair */
+    color: #a1a1a1;  /* Gris pour le texte */
+    cursor: not-allowed;  /* Changer le curseur pour indiquer qu'il est désactivé */
+}
+
+/* Style pour la croix du chatbot */
+#close-chatbot {
+    font-size: 30px; /* Taille de la croix */
+    color: #fff; /* Couleur de la croix */
+    background-color: transparent; /* Fond transparent */
+    width: 40px; /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Animation au survol */
+    border: none;
+}
+
+
+
+
+/* Lanceur du chatbot */
+#chatbot-launcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#chatbot-launcher:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    #chatbot-container {
+        width: 90%;
+        bottom: 10px;
+        right: 5%;
     }
+
+    #chatbot-launcher {
+        width: 50px;
+        height: 50px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #chatbot-header {
+        font-size: 14px;
+    }
+
+
+    
 }

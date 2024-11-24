@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        
+        <!-- Chatbot -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js"></script>
+    
        <meta charset="utf-8">
         <title>Welcome - Portfolio</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -112,10 +116,6 @@
         </div>
     </div>
 
-    <!-- Indication de défilement -->
-    <div class="scroll-indicator">
-        <i class="fa fa-chevron-down"></i> <!-- Utilisation d'une icône de flèche -->
-    </div>
 </div>
 <!-- Hero End -->
 
@@ -212,16 +212,16 @@
         <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
             <div class="header-content">
                 <i class="fas fa-briefcase"></i>
-                <h2>Expérience</h2>
+                <h2>Mes Expériences</h2>
             </div>    
 
         </header>
         <div class="timeline">
-            <!-- Stage Data Analyst -->
+            <!-- Data Analyst - Power BI-->
             <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
                 <div class="timeline-text">
                     <img src="assets/edf.png" alt="Logo EDF"  class="company-logo">
-                    <h2>Data Analyst</h2> 
+                    <h2>Data Analyst - Power BI</h2> 
                     <h4>EDF Renouvelables, Montpellier</h4>
                     <h4>Mars 2024 - Août 2024 (Stage · 6 mois)</h4>
                     <p>• Identification des besoins des équipes projets.</p>
@@ -229,11 +229,11 @@
                     <p>• Conception de dashboards <b>Power BI</b> pour le suivi du déploiement des projets et de leur suivi budgétaire via des KPIs.</p>
                     <p>• Publication et présentation des dashboards aux équipes pour améliorer la communication et la présentation des résultats.</p>
 
-                    <div class="portfolio-technologies">
+                    <!--<div class="portfolio-technologies">
                         <span class="tech-tag">Power BI</span>
                         <span class="tech-tag">DAX</span>
                         <span class="tech-tag">Power Query</span>
-                    </div>
+                    </div>-->
 
                 </div>
             </div>
@@ -242,9 +242,9 @@
                 <div class="timeline-text">
                     <img src="assets/seeyousun.jpeg" alt="seeyousun"  class="company-logo">
 
-                    <h2>Analyse de donnée et ML</h2> 
+                    <h2>Data Analyst - Machine Learning</h2> 
                     <h4>SEE YOU SUN, Rennes</h4>
-                    <h4>Février 2023 - Mai 2023 (Projet tutoré · 5 mois)</h4>
+                    <h4>Février 2023 - Mai 2023 (Stage · 5 mois)</h4>
                     <p>• Collecte de données en open data : domaines des véhicules électriques, des bornes de recharge, des données démographiques, et du trafic routier.</p>
                     <p>• Visualisation des données géospatiales avec <b>Python</b>: ratio du nombre de bornes par habitant, la densité, les distances stratégiques, etc.</p>
                     <p>• Développement et test de modèles statistiques: techniques de machine Learning.</p>
@@ -255,7 +255,7 @@
                 <div class="timeline-text">
                     <img src="assets/ami2_logo.png" alt="Logo AMI2"  class="company-logo">
 
-                    <h2>Analyste de données</h2> 
+                    <h2>Data Analyst - Power BI</h2> 
                     <h4>AMI2, Lisieux</h4>
                     <h4>Avril 2021 - Juin 2021 (Stage · 3 mois)</h4>
                     <p>• Conception et déploiement d'un tableau de bord Power BI, pour l’analyse des performances e-commerce.</p>
@@ -276,7 +276,7 @@
         <div class="header-content">
             <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                 <i class="fas fa-cogs"></i>
-                <h2>Compétences</h2>
+                <h2>Mes Compétences</h2>
             </header>
         </div>
 
@@ -301,6 +301,7 @@
                     <span class="skill-circle">Oracle</span>
                     <span class="skill-circle">MySQL</span>
                     <span class="skill-circle">SSIS</span>
+                    <span class="skill-circle">Alteryx</span>
                 </div>
             </div>
 
@@ -530,46 +531,56 @@
 
 
 
-<section class="contact-section">
-    <div class="contact-container">
-        <!-- Colonne Carte de Visite -->
-        <div class="contact-info">
-            <div class="personal-card">
-                <h2>Antoine Tirard</h2>
-                <div class="contact-details">
-                    <p><i class="fa fa-phone"></i> 06 73 21 74 34</p>
-                    <p><i class="fa fa-envelope"></i> tirardantoine@yahoo.fr</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/antoine-tirard/"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
+       <!-- Footer Start -->
+<!-- Footer Start -->
+<footer class="footer wow fadeIn" data-wow-delay="0.3s" id="isfooter">
+    <div class="container">
+        <div class="footer-info">
+            <h2>Contact</h2>
+            <h3>Antoine Tirard</h3>
+            <div class="footer-menu">
+                <p>
+                    <a href="tel:+3373217434">06 73 21 74 34</a>
+                </p>
+                <p>
+                    <a href="mailto:tirardantoine@yahoo.fr">tirardantoine@yahoo.fr</a>
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/antoine-tirard/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-        
-        <!-- Colonne Formulaire -->
-
-        <div class="contact-form">
-            <form action="https://formspree.io/f/movqlwjv" method="POST">
-                <input type="text" name="name" placeholder="Nom" required>
-                <input type="email" name="_replyto" placeholder="Email" required>
-                <input type="text" name="subject" placeholder="Sujet" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
+        <div class="copyright">
+            <p>&copy; <a href="#">2024 Antoine Tirard</a>, All Rights Reserved</p>
         </div>
     </div>
-</section>
+</footer>
 
 
 
 <!-- Footer End -->
 
-        
-        
+
+<div id="chatbot-container">
+    <div id="chatbot-header">
+        <span>Antoine Chatbot Portfolio</span>
+        <button id="close-chatbot">×</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-container">
+        <input type="text" id="user-input" placeholder="Choissisez une question">
+        <button id="send-message">Envoyer</button>
+    </div>
+</div>
+
+<div id="chatbot-launcher">💬</div>
+<div id="close-chatbot" class="close-btn">X</div>
+
+            
         
          <!-- Back to top button -->
-         <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+         <!--<a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>-->
         
         
          <!-- Pre Loader -->
@@ -702,12 +713,161 @@ const swiper = new Swiper('.portfolio-swiper', {
 
 <div id="chatbot-root"></div>
 
-<script type="text/javascript">
-  const chatbotContainer = document.getElementById('chatbot-root');
-  const root = ReactDOM.createRoot(chatbotContainer);
-  root.render(React.createElement(ChatBot));
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const chatbotLauncher = document.getElementById('chatbot-launcher');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const closeChatbot = document.getElementById('close-chatbot');
+    const userInput = document.getElementById('user-input');
+    const sendMessageBtn = document.getElementById('send-message');
+    const chatMessages = document.getElementById('chat-messages');
+
+    const botConfig = {
+        name: "Antoine.Bot",
+        welcomeMessage: "Bonjour ! Je suis l'assistant du portfolio d'Antoine. Choisissez une question ci-dessous.",
+        defaultResponse: "Je peux vous parler de ses moyens de contact, de sa situation actuelle, ou de ses compétences.",
+    };
+
+    // Liste des questions disponibles
+    const allQuestions = [
+        'Comment contacter Antoine ?',
+        "Quelle est la situation actuelle d'Antoine ?",
+        'Quelles sont ces principales compétences ?'
+    ];
+
+    // Liste des questions déjà posées
+    let askedQuestions = [];
+
+    // Fonction pour ajouter un message
+    function addMessage(message, sender = 'bot', suggestions = []) {
+        const messageElement = document.createElement('div');
+        messageElement.style.margin = '5px 0';
+        messageElement.style.padding = '8px';
+        messageElement.style.borderRadius = '5px';
+        messageElement.style.backgroundColor = sender === 'bot' ? '#f0f0f0' : '#e6f2ff';
+        messageElement.style.alignSelf = sender === 'bot' ? 'flex-start' : 'flex-end';
+        messageElement.innerHTML = message;  // Utiliser innerHTML pour accepter du HTML, comme les liens
+        chatMessages.appendChild(messageElement);
+
+        // Ajouter des suggestions, si disponibles
+        if (suggestions.length > 0 && sender === 'bot') {
+            const suggestionContainer = document.createElement('div');
+            suggestionContainer.style.marginTop = '5px';
+            suggestionContainer.style.display = 'flex';
+            suggestionContainer.style.flexDirection = 'column'; // Aligner verticalement les suggestions
+            suggestions.forEach((suggestion) => {
+                const btn = document.createElement('button');
+                btn.className = 'chat-suggestion';
+                btn.textContent = suggestion;
+                btn.addEventListener('click', () => {
+                    addMessage(suggestion, 'user');
+                    respondToMessage(suggestion);
+                    disableUserInput(); // Désactiver le champ de texte et bouton "Envoyer"
+                });
+                suggestionContainer.appendChild(btn);
+            });
+            chatMessages.appendChild(suggestionContainer);
+        }
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Fonction pour gérer les messages
+    function respondToMessage(message) {
+        let response = botConfig.defaultResponse;
+
+        // Réponses spécifiques avec emojis et liens
+        if (message.includes('contacter')) {
+            response = `
+                Je suis disponible par :
+                <ul>
+                    <li>Email : <a href="mailto:tirardantoine@yahoo.fr" style="color: #0056b3;">tirardantoine@yahoo.fr</a> </li>
+                    <li>Téléphone : <a href="tel:+33673217434" style="color: #0056b3;">0673217434</a> </li>
+                    <li>LinkedIn : <a href="https://www.linkedin.com/in/antoine-tirard/" target="_blank" style="color: #0056b3;">
+                        <i class="fab fa-linkedin"></i> Antoine Tirard
+                    </a> </li>
+                </ul>
+                Vous pouvez choisir le moyen de contact qui vous convient le mieux !
+            `;
+            askedQuestions.push('Comment contacter Antoine ?');
+        } else if (message.includes('situation actuelle')) {
+            response = `
+                Je suis disponible pour échanger sur toute collaboration. 
+                N'hésitez pas à le contacter pour discuter de projets ou opportunités. 🤝
+            `;
+            askedQuestions.push('Quelle est ta situation actuelle ?');
+        } else if (message.includes('formation')) {
+            response = `
+                Je suis diplômé d'un <strong>Master en Data Science et Modélisation Statistique</strong> 🏫.
+                J'ai acquis des compétences approfondies dans des domaines tels que la Data Visualisation, 
+                le Machine Learning, et le traitement des données avec des outils comme Power BI et Python.
+            `;
+            askedQuestions.push('Quelles sont tes compétences ?');
+        } else if (message.includes('compétences')) {
+            response = `
+                Je maîtrise plusieurs outils et techniques dans le domaine de la Data Science :
+                <ul>
+                    <li><strong>Data Visualisation</strong> avec Power BI 📊</li>
+                    <li><strong>Machine Learning</strong> avec Python 🤖</li>
+                    <li><strong>Processus ETL</strong> avec SSIS, Alteryx ⚙️</li>
+                </ul>
+                Je met mes compétences au service de projets variés dans le domaine de la data.
+            `;
+            askedQuestions.push('Quelles sont tes compétences ?');
+        }
+
+        // Calculer les questions restantes
+        const remainingQuestions = allQuestions.filter(q => !askedQuestions.includes(q));
+
+        // Ajouter la réponse et les suggestions
+        setTimeout(() => {
+            addMessage(response, 'bot', remainingQuestions);
+        }, 1000);
+    }
+
+    // Désactiver la zone de texte et bouton "Envoyer"
+    function disableUserInput() {
+        userInput.disabled = true;
+        sendMessageBtn.disabled = true;
+    }
+
+    // Réactiver la zone de texte et bouton "Envoyer"
+    function enableUserInput() {
+        userInput.disabled = false;
+        sendMessageBtn.disabled = false;
+    }
+
+    // Gestion des interactions utilisateur
+    chatbotLauncher.addEventListener('click', () => {
+        chatbotContainer.style.display = 'block';
+        chatbotLauncher.style.display = 'none';
+        addMessage(botConfig.welcomeMessage, 'bot', allQuestions);
+        enableUserInput(); // Réactiver le champ de texte à l'ouverture
+    });
+
+    closeChatbot.addEventListener('click', () => {
+        chatbotContainer.style.display = 'none';
+        chatbotLauncher.style.display = 'flex';
+        enableUserInput(); // Réactiver le champ de texte lorsque le chatbot est fermé
+    });
+
+    sendMessageBtn.addEventListener('click', () => {
+        const message = userInput.value.trim();
+        if (message) {
+            addMessage(message, 'user');
+            respondToMessage(message);
+            userInput.value = '';
+            disableUserInput(); // Désactiver le champ de texte et bouton "Envoyer" après un message utilisateur
+        }
+    });
+
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessageBtn.click();
+        }
+    });
+});
+
 </script>
-
-
      </body>
  </html>
