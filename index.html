@@ -725,7 +725,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botConfig = {
         name: "Antoine.Bot",
         welcomeMessage: "Bonjour ! Je suis l'assistant du portfolio d'Antoine. Choisissez une question ci-dessous.",
-        defaultResponse: "Je peux vous parler de ses moyens de contact, de sa situation actuelle, ou de ses compétences.",
+        defaultResponse: "Je peux vous parler de de comment le contactez, de sa situation actuelle, ou de ses compétences.",
     };
 
     // Liste des questions disponibles
@@ -793,7 +793,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (message.includes('situation actuelle')) {
             response = `
                 Je suis disponible pour échanger sur toute collaboration. 
-                N'hésitez pas à le contacter pour discuter de projets ou opportunités. 🤝
+                N'hésitez pas à me contacter pour discuter de projets ou opportunités. 🤝
             `;
             askedQuestions.push('Quelle est ta situation actuelle ?');
         } else if (message.includes('formation')) {
